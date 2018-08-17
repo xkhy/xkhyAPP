@@ -1,0 +1,210 @@
+/* 移动端适配 */
+
+/* @media screen and (width: 1920px) {
+	html { font-size: 96px;min-width: 100%;}
+ } */
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 28.8px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 38.4px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 49.6px !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 51.2px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 60px !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 64px !important;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  html {
+    font-size: 68.3px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 68.3px !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 80px !important
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 96px !important;
+  }
+}
+
+/*通用*/
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #333333;
+  text-align: center;
+}
+
+header .header_title {
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 2.54rem;
+}
+
+header .icon-style {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0.6rem;
+  line-height: 2.5rem;
+  color: #fff;
+}
+
+.header_btm {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #eeeeee;
+}
+
+.main li {
+  list-style: none;
+  width: 100%;
+  height: 2rem;
+  border-bottom: 1px solid #ddd;
+  line-height: 2rem;
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.main li span {
+  float: left;
+}
+
+.main li input {
+  width: 60%;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  border: 0;
+  margin-left: 2.1rem;
+}
+
+.icon_style {
+  position: absolute;
+  right: 1rem;
+}
+
+.main li select {
+  border: 0;
+  width: 75%;
+  font-size: 0.8rem;
+  margin-left: 2.1rem;
+  background-color: white;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.current {
+  color: #0096ff;
+}
+
+/*客户详情*/
+
+/*归类*/
+
+/*登录*/
+
+.logo {
+  width: 100%;
+  height: 14rem;
+  text-align: center;
+  line-height: 14rem;
+}
+
+.logo img {
+  width: 60%;
+}
+
+.login_input {
+  width: 100%;
+  height: 5.8rem;
+  padding: 0rem 0.8rem;
+  box-sizing: border-box;
+}
+
+.login_input_li {
+  width: 100%;
+  height: 2.5rem;
+  border-bottom: 1px solid #ddd;
+  line-height: 2.5rem;
+}
+
+.login_input_li input {
+  width: 60%;
+  height: 1.5rem;
+  position: relative;
+  bottom: 0.3rem;
+  border: 0;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+.login_input_li span {
+  font-size: 1.4rem;
+  color: #999;
+}
