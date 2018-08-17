@@ -11,19 +11,27 @@ import '../../modules/css/style.css'
 // import url from '../../modules/js/api.js'
 Vue.use(Router)
 
-// import { InfiniteScroll } from 'mint-ui';
+import { InfiniteScroll } from 'mint-ui';
 
 
-// Vue.use(InfiniteScroll)
+Vue.use(InfiniteScroll)
 
 // import footer from '../../components/Footer.vue'
 
 
 
 //使用mint-ui
-// import Mint from 'mint-ui';
-// Vue.use(Mint);
-// import 'mint-ui/lib/style.css';
+import Mint from 'mint-ui';
+Vue.use(Mint);
+import 'mint-ui/lib/style.css';
+import { Navbar, TabItem } from 'mint-ui';
+import { TabContainer, TabContainerItem } from 'mint-ui';
+import { Search } from 'mint-ui';
+Vue.component(Navbar.name, Navbar);
+Vue.component(TabItem.name, TabItem);
+Vue.component(TabContainer.name, TabContainer);
+Vue.component(TabContainerItem.name, TabContainerItem);
+Vue.component(Search.name, Search);
 
 //按需引入 mint-ui
 // import Button from 'mint-ui/lib/button';
