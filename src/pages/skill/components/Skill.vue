@@ -1,11 +1,11 @@
 <template>
   <div class="skill">
 		<div class="main">
-			<div class="speech_list" v-for="item of skillList" ref="skillList">
+			<li class="speech_list" v-for="(item,index) of skillList" >
 				<span class = "skillName">{{item.skillName}}</span>
-				<input type="number" name="item.id"  placeholder="请输入您的电话" class="skillInput"/>
-				<span class="icon_style iconfont skillBtn" :key="item.id" >&#xe61b;</span>
-			</div>
+				<label><input type="number"  placeholder="请输入您的电话" class="skillInput" :id="'input'+ forId(item.id)"/></label>
+				<span class="icon_style iconfont skillBtn" @click="ringUp(item.id)" >&#xe61b;</span>
+			</li>
 		</div>
   </div>
 </template>
@@ -13,54 +13,47 @@
 <script>
 
 export default {
-	name: 'Skill',
-	data () {
-		return {
-			msg: 'skill',
-			skillList:[{
-				id:1,
-				skillName:" 直销"
-			},{
-				id:2,
-				skillName:"贷款"
-			},{
-			    id:3,
-				skillName:"金融"
-			},{
-			    id:4,
-				skillName:"房产"
-			}]
-
-		}
-	},
-	mounted:function () {
-	    var a  = skillList.length;
-		console.log(a)
-		var nameLi = document.getElementsByClassName("skillName");
-		var inputLi = document.getElementsByClassName("skillInput");
-		var btnLi = document.getElementsByClassName("skillBtn");
-
-		for(var i = 0;i<btnLi.length;i++){
-            !function(i){
-                btnLi[i].addEventListener("click",function(){
-                    for(var j=0;j<btnLi.length;j++){
-                        if(j!=i){
-
-                        }else{
-                            var moblie = inputLi[j].value;
-                            var name = skillList.skillName;
-                            alert(name)
-                        }
-                    }
-                })
-            }(i)
-		}
-
-
-
-
+    name: 'Skill',
+    data () {
+        return {
+            msg: 'skill',
+            skillList:[{
+              id:1,
+              skillName:" 直销"
+            },{
+              id:2,
+              skillName:"贷款"
+            },{
+                id:3,
+              skillName:"金融"
+            },{
+                id:4,
+              skillName:"房产"
+            }]
+        }
     },
+    methods:{
+        ringUp:function (num) {
+            var chooseInput = document.getElementById('input'+num);
+            //获取电话号码
+            var choosemobile = chooseInput.value;
+            //获取所选话术模板id
+            var chooseSkill = num;
+            //验证电话正确格式
+            this.checkMobile(choosemobile);
 
+
+
+
+            //然后开始打电话
+        },
+        forId:function (num) {
+            return(num);
+        },
+        checkMobile:function (mobile) {
+
+        }
+    }
 }
 </script>
 
