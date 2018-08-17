@@ -1,31 +1,67 @@
 <template>
   <div class="skill">
 		<div class="main">
-			<div class="speech_list">
-				<!--<div class="speech_name"></div>-->
-				<span>直销</span>
-				<input type="number" name="" id="" placeholder="请输入您的电话"/>
-				<span class="icon_style iconfont">&#xe61b;</span>
-			</div>
-			<div class="speech_list">
-				<!--<div class="speech_name"></div>-->
-				<span>直销</span>
-				<input type="number" name="" id="" placeholder="请输入您的电话"/>
-				<span class="icon_style iconfont">&#xe61b;</span>
+			<div class="speech_list" v-for="item of skillList" ref="skillList">
+				<span class = "skillName">{{item.skillName}}</span>
+				<input type="number" name="item.id"  placeholder="请输入您的电话" class="skillInput"/>
+				<span class="icon_style iconfont skillBtn" :key="item.id" >&#xe61b;</span>
 			</div>
 		</div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'Skill',
-    data () {
-      return {
-        msg: 'skill'
-      }
-    }
-  }
+
+export default {
+	name: 'Skill',
+	data () {
+		return {
+			msg: 'skill',
+			skillList:[{
+				id:1,
+				skillName:" 直销"
+			},{
+				id:2,
+				skillName:"贷款"
+			},{
+			    id:3,
+				skillName:"金融"
+			},{
+			    id:4,
+				skillName:"房产"
+			}]
+
+		}
+	},
+	mounted:function () {
+	    var a  = skillList.length;
+		console.log(a)
+		var nameLi = document.getElementsByClassName("skillName");
+		var inputLi = document.getElementsByClassName("skillInput");
+		var btnLi = document.getElementsByClassName("skillBtn");
+
+		for(var i = 0;i<btnLi.length;i++){
+            !function(i){
+                btnLi[i].addEventListener("click",function(){
+                    for(var j=0;j<btnLi.length;j++){
+                        if(j!=i){
+
+                        }else{
+                            var moblie = inputLi[j].value;
+                            var name = skillList.skillName;
+                            alert(name)
+                        }
+                    }
+                })
+            }(i)
+		}
+
+
+
+
+    },
+
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -62,5 +98,5 @@
 }
 .speech_list span:first-child {
   color: #555;
-} 
+}
 </style>
