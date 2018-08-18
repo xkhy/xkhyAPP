@@ -8,6 +8,7 @@
 			</li>
 		</div>
   </div>
+
 </template>
 
 <script>
@@ -55,6 +56,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -88,8 +90,5 @@ export default {
 	font-size: 1.6rem;
 	position: absolute;
 	right: 1.5rem;
-}
-.speech_list span:first-child {
-  color: #555;
 }
 </style>
